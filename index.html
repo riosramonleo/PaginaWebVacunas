@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegacion</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!--
+        El siguiente codigo forma parte de la navbar o barra de navegacion superior
+    -->
+    <nav class="flex items-center bg-gray-100 p-3 flex-wrap">
+        <a href="#" class="p-2 mr-4 inline-flex items-center">
+            <img class="fill-current text-auto h-12 w-auto mr-2" src="/images/logo_vacunas.png" alt="" />
+        </a>
+
+        <button class="text-black inline-flex p-3 hover:bg-gray-300 rounded lg:hidden ml-auto outline-none nav-toggler"
+            data-target="#navigation">
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto text-blue-800" id="navigation">
+            <div
+                class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
+                <a href="#"
+                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-300">
+                    <img class="fill-current text-auto h-6 w-6 mr-2" src="/images/icon_calendar.png" alt="" />
+                    <span>Etapas de vida</span>
+                </a>
+                <a href="#"
+                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-300">
+                    <img class="fill-current text-auto h-6 w-4 mr-2" src="/images/icon_location.png" alt="" />
+                    <span>Donde Vacunar</span>
+                </a>
+                <a href="#"
+                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-300">
+                    <img class="fill-current text-auto h-6 w-6 mr-2" src="/images/icon_molecule.png" alt="" />
+                    <span>Conoce de Enfermedades</span>
+                </a>
+                <a href="#"
+                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-300">
+                    <img class="fill-current text-auto h-6 w-6 mr-2" src="/images/icon_article.png" alt="" />
+                    <span>Articulos</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!--A continuacion iremos con la funcion carrusel para las imagenes utilizamos algo llamado 
+        Materialize por medio de CDN para no tener que meter demasiado codigo
+        Desconozco si iban dentro de Javascript pero no me estaba jalando el codigo dentro del archivo, 
+        por lo mismo preferi escribirlo por aqui-->
+
+    <div class="slider">
+        <ul>
+            <li><img src="images/banner.jpg" alt=""></li>
+            <li><img src="images/banner.jpg" alt=""></li>
+            <li><img src="images/banner.jpg" alt=""></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+
+    <!--Este es el texto debajo del Banner-->
+    <div class="container mx-auto p-2">
+        <h1 class="text-center text-2xl text-purple-800 sm:text-5xl">Aqui encontraras información relevante para aclarar
+            dudas sobre cuando y donde vacunarse</h1>
+    </div>
+
+    <!-- Este acontinuacion son las tarjetas -->
+
+    <div
+        class="container items-center text-white mx-auto mt-12 text-center grid grid-cols-1 sm:grid-cols-2 px-12 gap-6 ">
+
+        <!-- Primer Tarjeta -->
+        <div class="lg:w-auto w-full mx-auto text-white">
+            <div class="bg-gradient-to-t from-purple-900 to-purple-500 rounded-xl p-6 text-center">
+                <h2 class="text-2xl font-bold mb-2">Cuando Vacunar</h2>
+                <div class="leading-relaxed mb-6 text-auto">Descubre las vacunas correspondientes a cada etapa de la
+                    vida.
+                </div>
+                <div>
+                    <a href="#"
+                        class="text-white px-8 py-2 bg-yellow-500 rounded-3xl hover:bg-yellow-600 hover:text-white">Conoce
+                        más</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda Tarjeta -->
+        <div class="lg:w-auto w-full mx-auto text-white">
+            <div class="bg-gradient-to-t from-blue-600 to-blue-400 rounded-xl p-6 text-center">
+                <h2 class="text-2xl font-bold mb-2">Donde Vacunar</h2>
+                <div class="leading-relaxed mb-6 text-xl">Descubre el centro de salud mas cercano para ti y tu familia
+                </div>
+                <div>
+                    <a href="#"
+                        class="text-white px-8 py-2 bg-yellow-500 rounded-3xl hover:bg-yellow-600 hover:text-white">Conoce
+                        más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="grid grid-cols-1 sm:grid-cols-4 grid-rows-3 gap-1">
+        <div class="bg-gray-300">1</div>
+        <div class="bg-gray-300 col-span-2 text-center text-blue-600">
+            ¿Sabes para que sirve vacunarse?
+        </div>
+        <div class="bg-gray-300">3</div>
+        <div class="bg-gray-300 col-span-2 text-green-100">La vacunacion es la estrategia mas util y segura para
+            prevenir muertes
+            por enfermedades infecciosas en todo el mundo, y aunque con frecuencia se piensa que la etapa de
+            vacunacion sucede solo en la niñez, no es asi, existe una vacuna para cada etapa de la vida.</div>
+        <div class="bg-gray-300 col-span-2">Por esta razon, queremos informar a profesionales de la salud y
+            la poblacion, acerca de las vacunas, enfermedades, centros de salud y calendario de vacunas para
+            tomar control de ellas
+        </div>
+        <div class="bg-gray-300">6</div>
+        <div class="bg-gray-300">7</div>
+        <div class="bg-gray-300">8</div>
+        <div class="bg-gray-300">9</div>
+        <div class="bg-gray-300">10</div>
+        <div class="bg-gray-300">11</div>
+        <div class="bg-gray-300">222</div>
+    </div>
+
+
+
+</body>
+
+</html>
