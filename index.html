@@ -9,208 +9,253 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <style>
-        .slider{
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
+        .slider {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
 
-.slider ul{
-    display: flex;
-    padding: 0;
-    width: 300%;
+        .slider ul {
+            display: flex;
+            padding: 0;
+            width: 300%;
 
-    animation: cambio 20s infinite alternate linear;
-}
+            animation: cambio 20s infinite alternate linear;
+        }
 
-.slider li {
-    list-style: none;
-    width: 100%;
-}
+        .slider li {
+            list-style: none;
+            width: 100%;
+        }
 
-.slider img{
-    width: 100%;
-}
+        .slider img {
+            width: 100%;
+        }
 
-@keyframes cambio {
-    0% { margin: 0;}
-    20% { margin: 0;}
+        @keyframes cambio {
+            0% {
+                margin: 0;
+            }
 
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
+            20% {
+                margin: 0;
+            }
 
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-}
+            25% {
+                margin-left: -100%;
+            }
 
-div.footer{
-    width: 100%;
-    height: 170px;
-}
+            45% {
+                margin-left: -100%;
+            }
 
-p.rights{
+            50% {
+                margin-left: -200%;
+            }
+
+            70% {
+                margin-left: -200%;
+            }
+        }
+
+    h1.lefts{
     position: relative;
-    text-align: justify-right;
-    padding-left: 6cm;
-    top: 60px;
-    color: rgb(0, 0, 0);
+    text-align: justify-left;
+    padding-left:0;
+    top: 0;
+    color: #267ca8;
 }
+h2.titulos{
+    color: #0292d7;;
+}
+
+h3.top{
+    color:#20506D
+}
+
     </style>
 </head>
 
 <body>
 
-<div class="w-[1920px] xsm:w-full mx-auto">
-    <nav class="bg-gray-200 flex justify-between lg:justify-start items-center">
-        <div class="logo flex-initial p-8 w-1/5">
-            <img src="images/logo_vacunas.png" width="100" alt="">
+    <div class="w-[1920px] xsm:w-full mx-auto">
+        <nav class="bg-gray-200 flex justify-between lg:justify-start items-center">
+            <a href="#" class="p-2 mr-4 inline-flex items-center ">
+                <img class="fill-current text-auto h-12 w-auto" src="images/logo_vacunas.png" alt="" />
+            </a>
+            <div class="links lg:block hidden w-1/6 md:w-4/6">
+                <ul class="flex menu items-center justify-center gap-5">
+                    <li><a href="#"
+                            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-300"><img
+                                src="images/icon_calendar.png" alt=""><h3 class="top">Etapas de Vida</h3></a></li>
+                    <li><a href="#"
+                            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-300"><img
+                                src="images/icon_location.png" alt=""><h3 class="top"></h3>Dónde Vacunar</a></li>
+                    <li><a href="#"
+                            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-gray-300"><img
+                                src="images/icon_molecule.png" alt=""><h3 class="top">Conoce de Enfermedades</h3></a></li>
+                    <li><a href="#"
+                            class="border-4 border-yellow-400 text-black font-bold p-2 rounded-full align-middle transition duration-500 hover:bg-red-500 hover:text-white">
+                            Artículos</a></li>
+                </ul>
+            </div>
+
+            <div class="text-black inline-flex p-3 hover:bg-gray-300 rounded lg:hidden ml-auto outline-none nav-toggler">
+                <a href="#" class="link" id="mobile-menu">
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg></a>
+
+                <ul class="mobile-links hidden my-10 w-full absolute z-50 left-0 text-center bg-gray-200">
+                    <li><a href="#" class="link">Etapas de Vida</a></li>
+                    <li><a href="#" class="link">Donde Vacunar</Datag></a></li>
+                    <li><a href="#" class="link">Conoce de Enfermedades</a></li>
+                    <li><a href="#" class="link">Articulos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="header">
+            <img src="img/hero.jpg" alt="">
         </div>
-        <div class="links lg:block hidden w-1/6 md:w-4/6">
-            <ul class="flex menu items-center justify-center gap-5">
-                <li><a href="#" class="link flex items-center"><img src="images/icon_calendar.png" alt="">Etapas de Vida</a></li>
-                <li><a href="#" class="link flex items-center"><img src="images/icon_location.png" alt="">Donde Vacunar</a></li>
-                <li><a href="#"class="link flex items-center"><img src="images/icon_molecule.png" alt="">Conoce de Enfermedades</a></li>
-                <li><a href="#"class="border-4 border-yellow-400 text-black font-bold p-2 rounded-full align-middle transition duration-500 hover:bg-red-500 hover:text-white"> Articulos</a></li>
-            </ul>
-        </div>
 
-        <div class="block lg:hidden w-1/6 lg:w-4/6">
-            <a href="#" class="link" id="mobile-menu">
-                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg></a>
+        <script>
+            const menuButton = document.querySelector('#mobile-menu');
 
-            <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-200">
-                <li><a href="#" class="link">Etapas de Vida</a></li>
-                <li><a href="#" class="link">Donde Vacunar</Datag></a></li>
-                <li><a href="#"class="link">Conoce de Enfermedades</a></li>
-                <li><a href="#"class="link">Articulos</a></li>
-            </ul>
-        </div>
-    </nav>
+            menuButton.addEventListener('click', e => {
+                const menu = document.querySelector('.mobile-links');
 
-    <div class="header">
-        <img src="img/hero.jpg" alt="">
-    </div>
+                menu.classList.toggle('hidden');
+            });
+        </script>
 
-    <script>
-        const menuButton = document.querySelector('#mobile-menu');
-
-        menuButton.addEventListener('click', e  => {
-            const menu = document.querySelector('.mobile-links');
-
-            menu.classList.toggle('hidden');
-        });
-    </script>
-
-    <!--A continuacion iremos con la funcion carrusel para las imagenes utilizamos algo llamado 
+        <!--A continuacion iremos con la funcion carrusel para las imagenes utilizamos algo llamado 
         Materialize por medio de CDN para no tener que meter demasiado codigo
         Desconozco si iban dentro de Javascript pero no me estaba jalando el codigo dentro del archivo, 
         por lo mismo preferi escribirlo por aqui-->
 
-    <div class="slider">
-        <ul>
-            <li><img src="images/banner.jpg" alt=""></li>
-            <li><img src="images/banner.jpg" alt=""></li>
-            <li><img src="images/banner.jpg" alt=""></li>
-        </ul>
-    </div>
-    <br>
-    <br>
+        <div class="slider">
+            <ul>
+                <li><img src="images/banner.jpg" alt=""></li>
+                <li><img src="images/banner.jpg" alt=""></li>
+                <li><img src="images/banner.jpg" alt=""></li>
+            </ul>
+        </div>
+        <br>
+        <br>
 
-    <!--Este es el texto debajo del Banner-->
-    <div class="container mx-auto p-2">
-        <h1 class="text-center text-2xl text-purple-800 sm:text-5xl">Aqui encontraras información relevante para aclarar
-            dudas sobre cuando y donde vacunarse</h1>
-    </div>
+        <!--Este es el texto debajo del Banner-->
+        <div class="container mx-auto p-2">
+            <h1 class="text-center text-2xl text-purple-800 sm:text-5xl">Aquí encontrarás información relevante para
+                aclarar dudas sobre cuando y dónde vacunarse</h1>
+        </div>
 
-    <!-- Este acontinuacion son las tarjetas -->
+        <!-- Este acontinuacion son las tarjetas -->
 
-    <div
-        class="container items-center text-white mx-auto mt-12 text-center grid grid-cols-1 sm:grid-cols-2 px-12 gap-6 ">
+        <div
+            class="container items-center text-white mx-auto mt-12 text-center grid grid-cols-1 sm:grid-cols-2 px-12 gap-6 ">
 
-        <!-- Primer Tarjeta -->
-        <div class="lg:w-auto w-full mx-auto text-white">
-            <div class="bg-gradient-to-t from-purple-900 to-purple-500 rounded-xl p-6 text-center">
-                <h2 class="text-2xl font-bold mb-2">Cuando Vacunar</h2>
-                <div class="leading-relaxed mb-6 text-auto">Descubre las vacunas correspondientes a cada etapa de la
-                    vida.
+            <!-- Primer Tarjeta -->
+            <div class="lg:w-auto w-full mx-auto text-white">
+                <div class="bg-gradient-to-t from-purple-900 to-purple-500 rounded-xl p-6 text-center">
+                    <h2 class="text-2xl font-bold mb-2">Cuándo Vacunar</h2>
+                    <div class="leading-relaxed mb-6 text-auto">Descubre las vacunas correspondientes a cada etapa de la
+                        vida.
+                    </div>
+                    <div>
+                        <a href="#"
+                            class="text-white px-8 py-2 bg-yellow-500 rounded-3xl hover:bg-yellow-600 hover:text-white">Conoce
+                            más</a>
+                    </div>
                 </div>
-                <div>
+            </div>
+
+            <!-- Segunda Tarjeta -->
+            <div class="lg:w-auto w-full mx-auto text-white">
+                <div class="bg-gradient-to-t from-blue-600 to-blue-400 rounded-xl p-6 text-center">
+                    <h2 class="text-2xl font-bold mb-2">Dónde Vacunar</h2>
+                    <div class="leading-relaxed mb-6 text-xl">Descubre el centro de salud más cercano para ti y tu
+                        familia
+                    </div>
+                    <div>
+                        <a href="#"
+                            class="text-white px-8 py-2 bg-yellow-500 rounded-3xl hover:bg-yellow-600 hover:text-white">Conoce
+                            más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>    
+
+    <div class="bg-gray-200">
+        <div class="max-w-2xl mx-auto py-16 px-4 sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8">
+          <h2 class="titulos text-2xl font-extrabold tracking-tight text-gray-900 text-center"><b>¿Sabes para qué sirve vacunarse?</b></h2>
+      
+          <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 lg:text-2xl">
+            <div class="group relative lg:col-span-2">
+                <h1 class="lefts"> La vacunacion es la estrategia más útil y segura para
+                    prevenir muertes por enfermedades infecciosas en todo el mundo, y aunque con frecuencia se
+                    piensa que la etapa de
+                    vacunación sucede solo en la niñez, no es asi, existe una vacuna para cada etapa de la vida.
+                </h1>
+            </div>
+
+            <div class="group relative lg:col-start-3 lg:col-span-2">
+                <h1 class="lefts">Por esta razón, queremos informar a profesionales de la salud y
+                    la población, acerca de las vacunas, enfermedades, centros de salud y calendario de vacunas para
+                    tomar control de ellas, prevenir y protegernos de todos.</h1>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+
+
+        <!-- El texto debajo de las cajas -->
+        <div class="container mx-auto p-2">
+            <h1 class="text-center text-2xl text-blue-400 sm:text-5xl">Te presentamos articulos sobre vacunación y sus
+                beneficios para la salud</h1>
+        </div>
+
+
+
+        <div class="lg:w-1/5 w-full lg:pr-3 mt-6 mx-auto">
+            <div class="bg-gray-200 rounded-3xl relative">
+                <img src="images/enfermedades_thumb.jpg" alt="">
+                <div class="p-6 absolute bottom-0 left-0">
+                    <h2 class="text-3xl font-bold mb-2 text-green-100 ">Enfermedades</h2>
+                    <div class="text-2xl leading-relaxed text-white">
+                        Conoce cada una de ellas, sus riesgos, sintomas y cómo prevenirlos<br><br>
+                    </div>
                     <a href="#"
-                        class="text-white px-8 py-2 bg-yellow-500 rounded-3xl hover:bg-yellow-600 hover:text-white">Conoce
+                        class="text-white px-7 p-2 bg-yellow-500 rounded-3xl hover:bg-yellow-600 hover:text-white">Conoce
                         más</a>
                 </div>
             </div>
         </div>
 
-        <!-- Segunda Tarjeta -->
-        <div class="lg:w-auto w-full mx-auto text-white">
-            <div class="bg-gradient-to-t from-blue-600 to-blue-400 rounded-xl p-6 text-center">
-                <h2 class="text-2xl font-bold mb-2">Donde Vacunar</h2>
-                <div class="leading-relaxed mb-6 text-xl">Descubre el centro de salud mas cercano para ti y tu familia
-                </div>
-                <div>
-                    <a href="#"
-                        class="text-white px-8 py-2 bg-yellow-500 rounded-3xl hover:bg-yellow-600 hover:text-white">Conoce
-                        más</a>
-                </div>
+        <br>
+
+        <div class="bg-gray-300 flex justify-between h-50">
+            <div class="text-gray-700 px-10 py-2 m-2">Derechos Reservados. <br> La reproduccion completa o parcial de
+                este material esta prohibida. <br>© 2020 Grupo de Compañias GSK. NIP-XXXX-XXX Agosto 2020.</b></div>
+            <div class="text-gray-700 px-10 py-8 m-2 flex">
+                <a href="">
+                    <img class="fill-current h-6 w-auto mr-2" src="images/icon_twitter.png" alt="">
+                </a>
+                <a href="">
+                    <img class="fill-current h-6 w-auto mr-2" src="images/icon_facebook.png" alt="">
+                </a>
+                <a href="">
+                    <img class="fill-current h-6 w-auto mr-2" src="images/icon_youtube.png" alt="">
+                </a>
             </div>
         </div>
-    </div>
-
-    <br>
-
-    <div class="mx-auto w-100% bg-gray-100">
-        <div class="grid grid-cols-6 grid-rows-1">
-        <div class="col-span-6 text-2xl text-center pt-8"><h1>¿Sabes para que sirve vacunarse?</h1></div>
-    </div>
-
-    <div class="grid grid-cols-6 grid-rows-1">
-        <div class="md:col-start-2 md:col-end-4 md:text-2xl text-center p-8"><h1>La vacunacion es la estrategia mas util y segura para
-            prevenir muertes por enfermedades infecciosas en todo el mundo, y aunque con frecuencia se piensa que la etapa de
-            vacunacion sucede solo en la niñez, no es asi, existe una vacuna para cada etapa de la vida.</h1></div>
-        <div class="md:col-start-4 md:col-end-6 md:text-2xl text-center p-8"><h1>Por esta razon, queremos informar a profesionales de la salud y
-            la poblacion, acerca de las vacunas, enfermedades, centros de salud y calendario de vacunas para
-            tomar control de ellas</h1></div>
-    </div>
-    </div>
-
-    <!-- El texto debajo de las cajas -->
-    <div class="container mx-auto p-2">
-        <h1 class="text-center text-2xl text-blue-400 sm:text-5xl">Te presentamos articulos sobre vacunacion y sus beneficios para la salud</h1>
-    </div>
-
-    <div class="lg:w-1/5 w-full lg:pr-3 mt-6 mx-auto">
-        <div class="bg-gray-200 rounded-3xl relative">
-            <img src="images/enfermedades_thumb.jpg" alt="">
-            <div class="p-6 absolute bottom-0 left-0">
-                <h2 class="text-3xl font-bold mb-2 text-green-100 ">Enfermedades</h2>
-                <div class="text-2xl leading-relaxed text-white">
-                    Conoce cada una de ellas, sus riesgos, sintomas y como prevenirlos<br><br>
-                </div>
-                <a href="#" class="text-white px-7 p-2 bg-yellow-500 rounded-3xl hover:bg-yellow-600 hover:text-white">Conoce más</a>
-            </div>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="bg-gray-300 flex justify-between h-50">
-        <div class="text-gray-700 px-10 py-2 m-2">Derechos Reservados <br> La reproduccion completa o parcial de este material esta prohibida <br>© 2020 Grupo de Compañias GSK. NIP-XXXX-XXX Agosto 2020</b></div>
-        <div class="text-gray-700 px-10 py-8 m-2 flex">
-            <a href="">
-                <img class="fill-current h-6 w-auto mr-2" src="images/icon_twitter.png" alt="">
-            </a>
-            <a href="">
-                <img class="fill-current h-6 w-auto mr-2" src="images/icon_facebook.png" alt="">
-            </a>
-            <a href="">
-                <img class="fill-current h-6 w-auto mr-2" src="images/icon_youtube.png" alt="">
-            </a>
-        </div>
-    </div>
 </body>
 
 </html>
